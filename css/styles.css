@@ -85,6 +85,7 @@
   box-sizing: border-box;
 }
 
+
 @media (prefers-reduced-motion: no-preference) {
   :root {
     scroll-behavior: smooth;
@@ -9349,7 +9350,7 @@ textarea.form-control-lg {
     margin-right: auto !important;
   }
   .mb-md-0 {
-    margin-bottom: 0 !important;
+    margin-bottom: 20 !important;
   }
   .mb-md-1 {
     margin-bottom: 0.25rem !important;
