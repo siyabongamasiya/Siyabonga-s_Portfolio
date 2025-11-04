@@ -53,7 +53,7 @@ const sendEMail = async() => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const submitButton = document.getElementById("submitButton");
-  const fields = form.querySelectorAll("input, textarea");
+  // const fields = form.querySelectorAll("input, textarea");
   const responseText = document.getElementById("responseText")
 
   const checkValidity = () => {
@@ -61,18 +61,18 @@ document.addEventListener("DOMContentLoaded", () => {
     submitButton.disabled = !allValid;
     responseText.classList.add("d-none");
     // Show red borders / feedback as user types
-    fields.forEach(field => {
-      if (!field.checkValidity()) {
-        field.classList.add("is-invalid");
-        field.classList.remove("is-valid");
-      } else {
-        field.classList.remove("is-invalid");
-        field.classList.add("is-valid");
-      }
-    });
+    // fields.forEach(field => {
+    //   if (!field.checkValidity()) {
+    //     field.classList.add("is-invalid");
+    //     field.classList.remove("is-valid");
+    //   } else {
+    //     field.classList.remove("is-invalid");
+    //     field.classList.add("is-valid");
+    //   }
+    // });
   };
 
-  fields.forEach(field => field.addEventListener("input", checkValidity));
+  // fields.forEach(field => field.addEventListener("input", checkValidity));
   
   form.addEventListener("submit", async (e) => {
   e.preventDefault(); 
