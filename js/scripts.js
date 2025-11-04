@@ -53,13 +53,13 @@ const sendEMail = async() => {
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contactForm");
   const submitButton = document.getElementById("submitButton");
-  const fields = form.querySelectorAll("input, textarea");
+  const fields = form?.querySelectorAll("input, textarea");
   const responseText = document.getElementById("responseText")
 
   const checkValidity = () => {
-    const allValid = form.checkValidity();
+    const allValid = form?.checkValidity();
     submitButton.disabled = !allValid;
-    responseText.classList.add("d-none");
+    responseText?.classList.add("d-none");
     // Show red borders / feedback as user types
     fields?.forEach(field => {
       if (!field.checkValidity()) {
@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const spinner = document.getElementById("spinner");
   const submitText = document.getElementById("submitText");
   submitButton.disabled = true;
-  spinner.classList.remove("d-none");
-  responseText.classList.add("d-none");
+  spinner?.classList.remove("d-none");
+  responseText?.classList.add("d-none");
   submitText.textContent = "Sending...";
 
   //send email
@@ -120,12 +120,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Hide spinner and re-enable button
-  spinner.classList.add("d-none");
-  responseText.classList.remove("d-none");
+  spinner?.classList.add("d-none");
+  responseText?.classList.remove("d-none");
   submitText.textContent = "Submit";
   submitButton.disabled = true;
   });
 
-  submitButton.disabled = true
-  responseText.classList.add("d-none");
+  submitButton? submitButton.disabled = true : ""
+  responseText?.classList.add("d-none");
 });
